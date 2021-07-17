@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スーパーチャット</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <a href="https://www.iconpon.com" class="sitename">すぱちゃじぇねれーた</a>
+    </header>
+    <main>
+      <h1>すぱちゃじぇねれーた</h1>
+      <h2>Youtubeのスーパーチャット風画像を作成します。</h2>
+
+      <div id="superchat_container_generate" class="superchat_container">
+        <div class="superchat_header">
+          <img id="user_img_generate" class="user_img" src="data:image/jpeg;base64,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">
+          <div>
+            <p id="user_name_generate" class="user_name"></p>
+            <p id="value_generate" class="value"></p>
+          </div>
+        </div>
+        <div class="superchat_sentents">
+          <p id="sentent_generate"></p>
+        </div>
+      </div>
+
+      <div id="form">
+        <div id="input_container">
+          <div>ユーザ名：<input id="user_name_input"></div>
+          <div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp金額：<input id="value_input"></div>
+          <div><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp本文：</span><textarea id="sentent_input"></textarea></div>
+        </div>
+        <br>
+        <div id="color_text">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp色</div>
+        <div id="color_button_container">
+          <div class="color_button" id="red"></div>
+          <div class="color_button" id="pink"></div>
+          <div class="color_button" id="orange"></div>
+          <div class="color_button" id="yellow"></div>
+          <div class="color_button" id="green"></div>
+          <div class="color_button" id="lightblue"></div>
+        </div>
+        <br>
+        <div id="attachment">
+          <label><input type="file" name="ファイル添付" class="fileinput">アイコン画像を添付する</label>
+        </div>
+      </div>
+      <div id="download">
+        <label><input id="download-btn" type="button" value="download image">画像をダウンロード</label>
+      </div>
+    </main>
+    <footer>
+      <p>created by Y.HARUUCHI</p>
+    </footer>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
