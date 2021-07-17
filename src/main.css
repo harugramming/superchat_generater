@@ -131,6 +131,9 @@ h2{
 
 
 /* 画像アップロード start */
+#download{
+  margin-bottom: 30px;
+}
 #download, #attachment{
   display: flex;
   justify-content: center;
@@ -168,10 +171,7 @@ h2{
 
 footer{
   width: 100%;
-  background-color: #e6e7e8;
   color: #333;
-  position: absolute;
-  bottom: 0;
 }
 footer p{
   padding: 10px 0;
